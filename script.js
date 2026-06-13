@@ -1,33 +1,85 @@
-function updateClock(){
+// QUOTES
+const quotes = [
+  "Hidup bukan perlombaan, tetapi perjalanan.",
+  "Menjadi diri sendiri adalah keberanian.",
+  "Kamu tidak harus hebat untuk memulai.",
+  "Setiap hari adalah kesempatan baru.",
+  "Bandingkan dirimu dengan dirimu kemarin."
+];
 
-    const now = new Date();
+document.getElementById("quote").innerText =
+    quotes[Math.floor(Math.random() * quotes.length)];
 
-    const time = now.toLocaleTimeString();
 
-    document.getElementById("time")
-    .innerHTML = time;
-
+// MOOD
+function setMood(mood){
+    document.getElementById("mood-result").innerText =
+        "Mood hari ini: " + mood;
 }
 
-setInterval(updateClock,1000);
 
-updateClock();
+// REFLECTION
+const reflection = document.getElementById("reflection");
 
-
-
-const hour = new Date().getHours();
-
-let greeting = "";
-
-if(hour < 12){
-    greeting = "Good Morning, Sena";
-}
-else if(hour < 18){
-    greeting = "Good Afternoon, Sena";
-}
-else{
-    greeting = "Good Evening, Sena";
+if(localStorage.getItem("reflection")){
+    reflection.value =
+        localStorage.getItem("reflection");
 }
 
-document.getElementById("greeting")
-.innerHTML = greeting;
+function saveReflection(){
+    localStorage.setItem(
+        "reflection",
+        reflection.value
+    );
+
+    alert("Refleksi tersimpan!");
+}
+
+
+// TODO LIST
+loadTasks();
+
+function addTask(){
+
+    const input =
+        document.getElementById("taskInput");
+
+    if(input.value === "") return;
+
+    let tasks =
+        JSON.parse(localStorage.getItem("tasks"))
+        || [];
+
+    tasks.push(input.value);
+
+    localStorage.setItem(
+        "tasks",
+        JSON.stringify(tasks)
+    );
+
+    input.value = "";
+
+    loadTasks();
+}
+
+function loadTasks(){
+
+    const list =
+        document.getElementById("taskList");
+
+    list.innerHTML = "";
+
+    let tasks =
+        JSON.parse(localStorage.getItem("tasks"))
+        || [];
+
+    tasks.forEach(task => {
+
+        const li =
+            document.createElement("li");
+
+        li.textContent = task;
+
+        list.appendChild(li);
+    });
+}
