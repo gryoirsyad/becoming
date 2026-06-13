@@ -1,81 +1,31 @@
-<section class="daily-section">
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Becoming</title>
 
-  <div class="card">
-    <h2>✨ Quote of the Day</h2>
-    <p id="quote"></p>
-  </div>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-  <div class="card">
-    <h2>😊 Mood Hari Ini</h2>
+<body>
 
-    <div class="mood-buttons">
-      <button onclick="setMood('😊 Senang')">😊</button>
-      <button onclick="setMood('😐 Biasa')">😐</button>
-      <button onclick="setMood('😔 Sedih')">😔</button>
-      <button onclick="setMood('😴 Lelah')">😴</button>
+    <div class="container">
+
+        <h1>Becoming</h1>
+        <p class="subtitle">
+            be yourself, YOLO
+        </p>
+
+        <div class="card">
+            <h2 id="greeting"></h2>
+            <h3 id="clock"></h3>
+            <p id="date"></p>
+        </div>
+
     </div>
 
-    <p id="mood-result"></p>
-  </div>
+    <script src="script.js"></script>
 
-  <div class="card">
-    <h2>📝 Refleksi Hari Ini</h2>
-
-    <textarea
-      id="reflection"
-      placeholder="Apa satu hal yang kamu syukuri hari ini?"
-    ></textarea>
-
-    <button onclick="saveReflection()">Simpan</button>
-  </div>
-
-  <div class="card">
-    <h2>📋 To-Do List</h2>
-
-    <input type="text" id="taskInput" placeholder="Tambah kegiatan...">
-    <button onclick="addTask()">Tambah</button>
-
-    <ul id="taskList"></ul>
-  </div>
-
-</section><section class="daily-section">
-
-  <div class="card">
-    <h2>✨ Quote of the Day</h2>
-    <p id="quote"></p>
-  </div>
-
-  <div class="card">
-    <h2>😊 Mood Hari Ini</h2>
-
-    <div class="mood-buttons">
-      <button onclick="setMood('😊 Senang')">😊</button>
-      <button onclick="setMood('😐 Biasa')">😐</button>
-      <button onclick="setMood('😔 Sedih')">😔</button>
-      <button onclick="setMood('😴 Lelah')">😴</button>
-    </div>
-
-    <p id="mood-result"></p>
-  </div>
-
-  <div class="card">
-    <h2>📝 Refleksi Hari Ini</h2>
-
-    <textarea
-      id="reflection"
-      placeholder="Apa satu hal yang kamu syukuri hari ini?"
-    ></textarea>
-
-    <button onclick="saveReflection()">Simpan</button>
-  </div>
-
-  <div class="card">
-    <h2>📋 To-Do List</h2>
-
-    <input type="text" id="taskInput" placeholder="Tambah kegiatan...">
-    <button onclick="addTask()">Tambah</button>
-
-    <ul id="taskList"></ul>
-  </div>
-
-</section>
+</body>
+</html>
