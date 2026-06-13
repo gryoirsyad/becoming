@@ -37,3 +37,14 @@ if(greetingEl){
 
 updateClock();
 setInterval(updateClock, 1000);
+
+const themeBtn =
+    document.getElementById("themeToggle");
+
+themeBtn.onclick = () => {
+
+    document.body.classList.toggle(
+        "light-mode"
+    );
+
+};
