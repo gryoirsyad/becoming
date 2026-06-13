@@ -1,36 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Becoming</title>
+<section class="daily-section">
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <div class="card">
+    <h2>✨ Quote of the Day</h2>
+    <p id="quote"></p>
+  </div>
 
-    <nav>
-        <h1>Becoming</h1>
+  <div class="card">
+    <h2>😊 Mood Hari Ini</h2>
 
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="pages/about.html">About</a></li>
-            <li><a href="pages/journal.html">Journal</a></li>
-            <li><a href="pages/habits.html">Habits</a></li>
-        </ul>
-    </nav>
+    <div class="mood-buttons">
+      <button onclick="setMood('😊 Senang')">😊</button>
+      <button onclick="setMood('😐 Biasa')">😐</button>
+      <button onclick="setMood('😔 Sedih')">😔</button>
+      <button onclick="setMood('😴 Lelah')">😴</button>
+    </div>
 
-    <section class="hero">
-        <h2 id="greeting"></h2>
+    <p id="mood-result"></p>
+  </div>
 
-        <p>
-            Life does not ask us to compete.
-        </p>
+  <div class="card">
+    <h2>📝 Refleksi Hari Ini</h2>
 
-        <h1 id="time"></h1>
-    </section>
+    <textarea
+      id="reflection"
+      placeholder="Apa satu hal yang kamu syukuri hari ini?"
+    ></textarea>
 
-    <script src="script.js"></script>
+    <button onclick="saveReflection()">Simpan</button>
+  </div>
 
-</body>
-</html>
+  <div class="card">
+    <h2>📋 To-Do List</h2>
+
+    <input type="text" id="taskInput" placeholder="Tambah kegiatan...">
+    <button onclick="addTask()">Tambah</button>
+
+    <ul id="taskList"></ul>
+  </div>
+
+</section><section class="daily-section">
+
+  <div class="card">
+    <h2>✨ Quote of the Day</h2>
+    <p id="quote"></p>
+  </div>
+
+  <div class="card">
+    <h2>😊 Mood Hari Ini</h2>
+
+    <div class="mood-buttons">
+      <button onclick="setMood('😊 Senang')">😊</button>
+      <button onclick="setMood('😐 Biasa')">😐</button>
+      <button onclick="setMood('😔 Sedih')">😔</button>
+      <button onclick="setMood('😴 Lelah')">😴</button>
+    </div>
+
+    <p id="mood-result"></p>
+  </div>
+
+  <div class="card">
+    <h2>📝 Refleksi Hari Ini</h2>
+
+    <textarea
+      id="reflection"
+      placeholder="Apa satu hal yang kamu syukuri hari ini?"
+    ></textarea>
+
+    <button onclick="saveReflection()">Simpan</button>
+  </div>
+
+  <div class="card">
+    <h2>📋 To-Do List</h2>
+
+    <input type="text" id="taskInput" placeholder="Tambah kegiatan...">
+    <button onclick="addTask()">Tambah</button>
+
+    <ul id="taskList"></ul>
+  </div>
+
+</section>
