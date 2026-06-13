@@ -28,7 +28,11 @@ function updateClock() {
         greeting = "Selamat malam 🌙";
     }
 
-    document.getElementById("greeting").textContent = greeting;
+    const greetingEl = document.getElementById("greeting");
+
+if(greetingEl){
+    greetingEl.textContent = greeting;
+}
 }
 
 updateClock();
